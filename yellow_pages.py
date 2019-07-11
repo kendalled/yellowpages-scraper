@@ -43,7 +43,7 @@ def parse_listing(keyword,place):
 
 				for results in listings:
 					XPATH_BUSINESS_NAME = ".//a[@class='business-name']//text()" 
-					XPATH_BUSSINESS_PAGE = ".//a[@class='business-name']//@href" 
+					XPATH_BUSINESS_PAGE = ".//a[@class='business-name']//@href" 
 					XPATH_TELEPHONE = ".//div[@itemprop='telephone']//text()"
 					XPATH_ADDRESS = ".//div[@class='info']//div//p[@itemprop='address']"
 					XPATH_STREET = ".//div[@class='info']//div//p[@itemprop='address']//span[@itemprop='streetAddress']//text()"
@@ -57,7 +57,7 @@ def parse_listing(keyword,place):
 
 					raw_business_name = results.xpath(XPATH_BUSINESS_NAME)
 					raw_business_telephone = results.xpath(XPATH_TELEPHONE)	
-					raw_business_page = results.xpath(XPATH_BUSSINESS_PAGE)
+					raw_business_page = results.xpath(XPATH_BUSINESS_PAGE)
 					raw_categories = results.xpath(XPATH_CATEGORIES)
 					raw_website = results.xpath(XPATH_WEBSITE)
 					raw_rating = results.xpath(XPATH_RATING)
